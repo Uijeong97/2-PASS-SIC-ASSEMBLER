@@ -1,0 +1,21 @@
+0x1000	test     start   1000
+0x1003	first    lda     five
+0x1006	         sta     alpha
+0x1009	         lda     alpha
+0x100c	         add     incr
+0x100f	         sta     beta
+0x1012	         lda     gamm
+0x1015	         sub     five
+0x1018	         sta     delta
+0x101b	         ldch    charz
+0x101e	         stch    c1
+0x1021	five     word    5
+0x1024	one      word    1
+0x1027	alpha    resw    1
+0x102a	beta     resw    1
+0x102d	gamm     word    11
+0x1030	delta    resw    1
+0x1033	incr     word    3
+0x1036	charz    byte    c'z'
+0x1039	c1       resb    1
+0x103c	         end     first
