@@ -19,9 +19,13 @@
 
 
 # OPTAB
-- Ofinfo 클래스(하나의 연산자가 가진 정보)
-==opcode, formatbytes, operandNum
-- OpCodeTable 클래스
+- Ofinfo 리스트=[opcode, formatbytes, operandNum]
+- 정적 해쉬테이블 형태로 obtab={'opkey':[ofinfo]}
+- p1:
+연상 명령어 조사하는 데 사용
+명령어의 길이만큼 LOCCTR 증가
+- p2:
+명령어->기계어 번역
 
 # SYMTAB
 - p1:

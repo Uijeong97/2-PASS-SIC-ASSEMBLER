@@ -28,7 +28,7 @@ class SYMTAB:
         sym[label][1]="Error"
     def w(self,label,LOCCTR,flag):
         self.sym[label]=[LOCCTR,flag]
-        self.f.write(label+'\t'+LOCCTR+'\t'+flag)
+        self.f.write(label+'\t'+LOCCTR+'\t'+flag+"\n")
     def close(self):
         self.f.close()
 

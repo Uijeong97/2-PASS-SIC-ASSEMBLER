@@ -1,0 +1,50 @@
+0x1000	test5	start	1000	
+0x1000	first	j	begin	
+0x1003	five	word	5	
+0x1006	xxx	resw	1	
+0x1009	begin	lda	zero	
+0x100c		ldx	zero	
+0x100f	loop	jsub	getc	
+0x1012		sta	sleg	
+0x1015		mul	bit4	
+0x1018		sta	sleg	
+0x101b		jsub	getc	
+0x101e		add	sleg	
+0x1021		stch	exaddr,x	
+0x1024		stx	index	
+0x1027		lda	index	
+0x102a		add	index	
+0x102d		stx	index	
+0x1030		tix	index	
+0x1033		j	loop	
+0x1036	getc	stx	temp	
+0x1039		ldx	incnt	
+0x103c		lda	incnt	
+0x103f		add	one	
+0x1042		sta	incnt	
+0x1045		ldch	indev,x	
+0x1048		comp	eof	
+0x104b		jeq	exaddr	
+0x104e		comp	chga	
+0x1051		jlt	getc	
+0x1054		sub	chga	
+0x1057		comp	ten	
+0x105a		jlt	return	
+0x105d		sub	seven	
+0x1060	return	ldx	temp	
+0x1063		rsub		
+0x1066	zero	word	0	
+0x1069	one	word	1	
+0x106c	seven	word	7	
+0x106f	ten	word	10	
+0x1072	bit4	word	16	
+0x1075	chga	word	48	
+0x1078	eof	word	63	
+0x107b	sleg	resw	1	
+0x107e	temp	resw	1	
+0x1081	incnt	word	0	
+0x1084	index	word	0	
+0x1087	indev	byte	c'0010030C1006'	
+0x1093		byte	c'000005FFFFFF?'	
+0x10a0	exaddr	resb	12	
+0x10ac		end	first	
