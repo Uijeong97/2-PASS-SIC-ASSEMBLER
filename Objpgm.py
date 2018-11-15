@@ -32,9 +32,6 @@ class Objpgm:
             trRecord=""
            # index+=1
         
-    def initializeTR(self):
-        self.objpgm.write("T"+"0"*(6-len(TRList[i]))+TRList[i].upper()+"\n")
-        
     def writeER(self,startAddr):
         startAddr=format(int(startAddr,16),'x') #0x 없애주기위해 작업
         self.objpgm.write("E"+'0'*(6-len(startAddr))+startAddr+"\n")
