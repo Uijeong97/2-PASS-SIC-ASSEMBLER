@@ -1,35 +1,35 @@
 # PASS1
-- ¸ðµç ¹®¿¡ LOCCTR ¹èÁ¤ -> INTFILE »ý¼º
-- ¸ðµç ·¹ÀÌºí¿¡ ¹èÁ¤µÈ LOCCTR °ª ÀúÀå -> SYMTAB »ý¼º
-- ¾î¼Àºí·¯ Áö½ÃÀÚ(BYTE, RESW)ÀÇ µ¥ÀÌÅÍ ±æÀÌ °áÁ¤
+- ëª¨ë“  ë¬¸ì— LOCCTR ë°°ì • -> INTFILE ìƒì„±
+- ëª¨ë“  ë ˆì´ë¸”ì— ë°°ì •ëœ LOCCTR ê°’ ì €ìž¥ -> SYMTAB ìƒì„±
+- ì–´ì…ˆë¸”ëŸ¬ ì§€ì‹œìž(BYTE, RESW)ì˜ ë°ì´í„° ê¸¸ì´ ê²°ì •
 
-#Intfile
-- ¹èÁ¤µÈ ÁÖ¼Ò, ¿À·ù ÇÃ·¡±×
+# Intfile
+- ë°°ì •ëœ ì£¼ì†Œ, ì˜¤ë¥˜ í”Œëž˜ê·¸
 
 # PASS2
-- ¸í·É¾î ¾î¼Àºí( ¿¬»êÀÚ ÄÚµå ¹ø¿ª, ÁÖ¼Ò Á¶»ç)
-- BYTE, WORD µî Á¤ÀÇµÇ´Â µ¥ÀÌÅÍ °ª »ý¼º
-- ¾î¼Àºí·¯ Áö½ÃÀÚ Ã³¸®
-- ¸ñÀû ÇÁ·Î±×·¥°ú ¾î¼Àºí·¯ ¸®½ºÆ® Ãâ·Â
+- ëª…ë ¹ì–´ ì–´ì…ˆë¸”( ì—°ì‚°ìž ì½”ë“œ ë²ˆì—­, ì£¼ì†Œ ì¡°ì‚¬)
+- BYTE, WORD ë“± ì •ì˜ë˜ëŠ” ë°ì´í„° ê°’ ìƒì„±
+- ì–´ì…ˆë¸”ëŸ¬ ì§€ì‹œìž ì²˜ë¦¬
+- ëª©ì  í”„ë¡œê·¸ëž¨ê³¼ ì–´ì…ˆë¸”ëŸ¬ ë¦¬ìŠ¤íŠ¸ ì¶œë ¥
 
  
 # LOCCTR
-- ÁÖ¼® Ã³¸®
-- start °¨Áö
+- ì£¼ì„ ì²˜ë¦¬
+- start ê°ì§€
 
 
 # OPTAB
-- Ofinfo ¸®½ºÆ®=[opcode, formatbytes, operandNum]
-- Á¤Àû ÇØ½¬Å×ÀÌºí ÇüÅÂ·Î obtab={'opkey':[ofinfo]}
+- Ofinfo ë¦¬ìŠ¤íŠ¸=[opcode, formatbytes, operandNum]
+- ì •ì  í•´ì‰¬í…Œì´ë¸” í˜•íƒœë¡œ obtab={'opkey':[ofinfo]}
 - p1:
-¿¬»ó ¸í·É¾î Á¶»çÇÏ´Â µ¥ »ç¿ë
-¸í·É¾îÀÇ ±æÀÌ¸¸Å­ LOCCTR Áõ°¡
+ì—°ìƒ ëª…ë ¹ì–´ ì¡°ì‚¬í•˜ëŠ” ë° ì‚¬ìš©
+ëª…ë ¹ì–´ì˜ ê¸¸ì´ë§Œí¼ LOCCTR ì¦ê°€
 - p2:
-¸í·É¾î->±â°è¾î ¹ø¿ª
+ëª…ë ¹ì–´->ê¸°ê³„ì–´ ë²ˆì—­
 
 # SYMTAB
 - p1:
-·¹ÀÌºí ÀÌ¸§°ú ÁÖ¼Ò¸¦ SYMTAB¿¡ ÀÔ·Â
+ë ˆì´ë¸” ì´ë¦„ê³¼ ì£¼ì†Œë¥¼ SYMTABì— ìž…ë ¥
 - p2:
-ÇÇ¿¬»êÀÚ symbolÀ» SYMTAB¿¡¼­ Ã£´Â µ¥ »ç¿ë
-operand ÁÖ¼Ò·Î symtabÀÇ °ª ÀúÀå
+í”¼ì—°ì‚°ìž symbolì„ SYMTABì—ì„œ ì°¾ëŠ” ë° ì‚¬ìš©
+operand ì£¼ì†Œë¡œ symtabì˜ ê°’ ì €ìž¥
